@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Vida - Jhon Alexander Garzon Avila</title>
+    <style>
+        :root {
+            --primary-color: #1e293b;
+            --secondary-color: #475569;
+            --accent-color: #0ea5e9;
+            --text-color: #334155;
+            --bg-light: #f8fafc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: var(--text-color);
+            line-height: 1.5;
+            background-color: #ffffff;
+            padding: 40px;
+        }
+
+        .cv-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Encabezado Principal */
+        header {
+            text-align: center;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+
+        header h1 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        header .subtitle {
+            color: var(--accent-color);
+            font-size: 1.15rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        /* Información de Contacto */
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px 20px;
+            font-size: 0.9rem;
+            background-color: var(--bg-light);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: left;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-item strong {
+            color: var(--primary-color);
+            margin-right: 5px;
+        }
+
+        .contact-item a {
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+            color: var(--accent-color);
+        }
+
+        /* Secciones */
+        section {
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 5px;
+            margin-bottom: 12px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        p.profile-text {
+            font-size: 0.95rem;
+            text-align: justify;
+        }
+
+        /* Listas de Competencias y Proyectos */
+        .skills-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            font-size: 0.95rem;
+        }
+
+        .skills-list li {
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .skills-list li::before {
+            content: "▪";
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            font-size: 1.1rem;
+            top: -2px;
+        }
+
+        /* Bloques de Experiencia y Proyectos */
+        .item-block {
+            margin-bottom: 18px;
+            page-break-inside: avoid;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+
+        .item-title {
+            font-size: 1.05rem;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .item-date {
+            font-size: 0.85rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .item-subtitle {
+            font-size: 0.95rem;
+            color: var(--secondary-color);
+            font-style: italic;
+            margin-bottom: 6px;
+        }
+
+        .item-description {
+            list-style: none;
+            font-size: 0.9rem;
+            padding-left: 15px;
+        }
+
+        .item-description li {
+            position: relative;
+            margin-bottom: 4px;
+            text-align: justify;
+        }
+
+        .item-description li::before {
+            content: "•";
+            color: var(--secondary-color);
+            position: absolute;
+            left: -12px;
+        }
+
+        /* Optimización de impresión PDF masiva */
+        @media print {
+            body {
+                padding: 0;
+                font-size: 12pt;
+                color: #000000;
+            }
+            .cv-container {
+                max-width: 100%;
+            }
+            .contact-info {
+                background-color: #ffffff !important;
+                border: 1px solid #cbd5e1;
+            }
+            header h1 { color: #000000; }
+            .section-title { 
+                border-bottom: 2px solid #000000;
+                color: #000000; 
+            }
+            .item-title { color: #000000; }
+            a { color: #000000 !important; }
+            @page {
+                size: letter;
+                margin: 1.5cm 1.5cm 1.5cm 1.5cm;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cv-container">
+        
+        <header>
+            <h1>Jhon Alexander Garzón Avila</h1>
+            <div class="subtitle">Desarrollador Backend Junior & Especialista en Seguridad Electrónica</div>
+            
+            <div class="contact-info">
+                <div class="contact-item"><strong>📍 Ubicación:</strong> Bogotá D.C., Colombia</div>
+                <div class="contact-item"><strong>📞 Teléfono / WhatsApp:</strong> +57 314 4584285</div>
+                <div class="contact-item"><strong>✉️ Correo 1:</strong> <a href="mailto:jhonalexandergarzonavila@gmail.com">jhonalexandergarzonavila@gmail.com</a></div>
+                <div class="contact-item"><strong>✉️ Correo 2:</strong> <a href="mailto:jagarzon55@gmail.com">jagarzon55@gmail.com</a></div>
+                <div class="contact-item"><strong>🔗 LinkedIn:</strong> <a href="https://linkedin.com/in/jhon-alexander-garzon-avila" target="_blank">linkedin.com/in/jhon-alexander-garzon-avila</a></div>
+                <div class="contact-item"><strong>🐙 GitHub:</strong> <a href="https://github.com/JHONALEXAVILA" target="_blank">github.com/JHONALEXAVILA</a></div>
+                <div class="contact-item" style="grid-column: span 2;"><strong>🌐 Portafolio Web:</strong> <a href="https://jhon-alexander-portfolio-preview.netlify.app" target="_blank">jhon-alexander-portfolio-preview.netlify.app</a></div>
+            </div>
+        </header>
+
+        <section>
+            <div class="section-title">Perfil Profesional</div>
+            <p class="profile-text">
+                [span_0](start_span)Profesional técnico con más de 6 años de experiencia combinada en el desarrollo de software y la implementación de infraestructura crítica de TI y seguridad[span_0](end_span). [span_1](start_span)Especializado en arquitectura backend, lógica de programación y modelado de bases de datos relacionales[span_1](end_span). [span_2](start_span)Experto en la convergencia de tecnología digital y sistemas avanzados de seguridad electrónica (CCTV automatizado, redes IP y control de accesos) aplicados a la transformación digital y optimización logística de grandes superficies[span_2](end_span). [span_3](start_span)[span_4](start_span)Capacidad analítica superior orientada a resolver problemas complejos y a transformar requerimientos operativos en soluciones de software estables y escalables[span_3](end_span)[span_4](end_span).
+            </p>
+        </section>
+
+        <section>
+            <div class="section-title">Competencias Técnicas</div>
+            <ul class="skills-list">
+                [span_5](start_span)<li><strong>Lenguajes:</strong> C#, Java, JavaScript, Python, HTML5, CSS3[span_5](end_span).</li>
+                [span_6](start_span)<li><strong>Bases de Datos (SQL):</strong> MySQL, PostgreSQL, Oracle, SQL Server[span_6](end_span).</li>
+                [span_7](start_span)<li><strong>Seguridad Electrónica:</strong> CCTV Avanzado (IP/Analógico), Detección de incendios, Control de accesos[span_7](end_span).</li>
+                [span_8](start_span)<li><strong>Herramientas y Entornos:</strong> Git, GitHub, APIs REST, Visual Studio Code, Redes y Conectividad[span_8](end_span).</li>
+            </ul>
+        </section>
+
+        <section>
+            <div class="section-title">Proyectos Tecnológicos Destacados</div>
+            
+            <div class="item-block">
+                <div class="item-header">
+                    <span class="item-title">Proyecto Magnus (Plataforma de Gestión Técnica & Seguridad)</span>
+                    <span class="item-date">Proyecto Insignia</span>
+                </div>
+                <div class="item-subtitle">Desarrollador Principal / Diseñador de Software</div>
+                <ul class="item-description">
+                    <li>Diseño, codificación y despliegue de una plataforma web orientada a la documentación técnica estructurada y la administración de infraestructura logística avanzada en sistemas de seguridad electrónica.</li>
+                    <li>Integración de interfaces dinámicas y lógicas estables para centralizar reportes técnicos, optimizando los tiempos de respuesta y la gestión operativa en campo.</li>
+                </ul>
+            </div>
+
+            <div class="item-block">
+                <div class="item-header">
+                    <span class="item-title">Portafolio Web Automatizado y Adaptativo</span>
+                    <span class="item-date">Despliegue Exitoso</span>
+                </div>
+                <div class="item-subtitle">Desarrollo Open Source</div>
+                <ul class="item-description">
+                    <li>Aplicación Single Page (SPA) que consume de forma asíncrona la API REST de GitHub para renderizar proyectos en tiempo real sin usar datos en caché.</li>
+                    <li>Implementación de un algoritmo de ordenamiento mixto que posiciona de forma fija el Proyecto Magnus en el renglón principal y organiza el resto de repositorios de mayor a menor volumen de almacenamiento.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-title">Experiencia Profesional</div>
+
+            <div class="item-block">
+                <div class="item-header">
+                    <span class="item-title">Magnus Seguridad Ltda.</span>
+                    <span class="item-date">Feb 2025 – Actualidad</span>
+                </div>
+                [span_9](start_span)<div class="item-subtitle">Técnico Electrónico y de Proyectos TI[span_9](end_span)</div>
+                <ul class="item-description">
+                    [span_10](start_span)<li>Gestión técnica de proyectos tecnológicos y de transformación digital enfocados en la seguridad crítica de almacenes de cadena[span_10](end_span).</li>
+                    [span_11](start_span)<li>Implementación y comisionamiento de sistemas avanzados de CCTV y redes inteligentes de detección de incendios para garantizar la continuidad operativa logística[span_11](end_span).</li>
+                </ul>
+            </div>
+
+            <div class="item-block">
+                <div class="item-header">
+                    <span class="item-title">Securitas Colombia</span>
+                    <span class="item-date">Mar 2025 – Feb 2026</span>
+                </div>
+                [span_12](start_span)<div class="item-subtitle">Técnico Electrónico[span_12](end_span)</div>
+                <ul class="item-description">
+                    [span_13](start_span)<li>Despliegue y mantenimiento preventivo/correctivo de infraestructura de seguridad electrónica en almacenes comerciales a gran escala[span_13](end_span).</li>
+                    [span_14](start_span)<li>Configuración lógica de sistemas IP de videovigilancia y redes de protección corporativa, minimizando fallas en la cadena de distribución[span_14](end_span).</li>
+                </ul>
+            </div>
+
+            <div class="item-block">
+                <div class="item-header">
+                    <span class="item-title">Assis Pronta SAS</span>
+                    <span class="item-date">Sep 2024 – Feb 2025</span>
+                </div>
+                [span_15](start_span)<div class="item-subtitle">Técnico Electrónico[span_15](end_span)</div>
+                <ul class="item-description">
+                    [span_16](start_span)<li>Ejecución física y lógica de obras tecnológicas de seguridad electrónica enfocadas en superficies comerciales de alta densidad[span_16](end_span).</li>
+                    [span_17](start_span)<li>Supervisión de montajes, tendido de infraestructura de conectividad de red y calibración de CCTV analógico e IP[span_17](end_span).</li>
+                </ul>
+            </div>
+
+            <div class="item-block">
+                <div class="item-header">
+                    <span class="item-title">G4S Technology</span>
+                    <span class="item-date">Jul 2021 – Sep 2024</span>
+                </div>
+                [span_18](start_span)<div class="item-subtitle">Técnico de Mantenimiento[span_18](end_span)</div>
+                <ul class="item-description">
+                    [span_19](start_span)<li>Administración del mantenimiento preventivo y correctivo de sistemas masivos de monitoreo y automatización de seguridad electrónica para almacenes y centros logísticos[span_19](end_span).</li>
+                    [span_20](start_span)<li>Diagnóstico avanzado de fallas lógicas de comunicación en redes y hardware de videovigilancia[span_20](end_span).</li>
+                </ul>
+            </div>
+
+            <div class="item-block">
+                <div class="item-header">
+                    <span class="item-title">Proyectos Independientes</span>
+                    <span class="item-date">Periodos Intermitentes (2015 – 2020)</span>
+                </div>
+                [span_21](start_span)<div class="item-subtitle">Desarrollador de Software Backend / Fullstack Freelance[span_21](end_span)</div>
+                <ul class="item-description">
+                    [span_22](start_span)<li>Diseño, normalización y administración de bases de datos relacionales orientadas a optimizar la gestión comercial de clientes independientes[span_22](end_span).</li>
+                    [span_23](start_span)<li>Automatización de procesos de negocio internos utilizando metodologías ágiles de desarrollo de software[span_23](end_span).</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-title">Educación y Formación Complementaria</div>
+            <div class="item-block">
+                <div class="item-header">
+                    <span class="item-title">Programa ONE (Oracle Next Education) — Alura Latam & Oracle</span>
+                    <span class="item-date">Ene 2025</span>
+                </div>
+                [span_24](start_span)<div class="item-subtitle">Certificación en Programación de Software (Especialización Backend)[span_24](end_span)</div>
+            </div>
+            <div class="item-block">
+                <div class="item-header">
+                    <span class="item-title">Servicio Nacional de Aprendizaje (SENA)</span>
+                    <span class="item-date">2013 – 2022</span>
+                </div>
+                <ul class="item-description" style="margin-top: 5px;">
+                    [span_25](start_span)<li><strong>Programador Junior</strong> — Formación Presencial / Virtual (Nov 2022)[span_25](end_span).</li>
+                    [span_26](start_span)<li><strong>Controles y Seguridad Informática</strong> — Formación Virtual (Mar 2019)[span_26](end_span).</li>
+                    [span_27](start_span)<li><strong>Arquitectura de Computadores</strong> — Formación Virtual (Ago 2017)[span_27](end_span).</li>
+                    [span_28](start_span)<li><strong>Calidad en el Desarrollo de Software</strong> — Formación Presencial (Nov 2013)[span_28](end_span).</li>
+                </ul>
+            </div>
+        </section>
+
+        <section style="page-break-inside: avoid;">
+            <div class="section-title">Actividades de Interés Extracurricular</div>
+            <ul class="skills-list">
+                [span_29](start_span)<li>Desarrollo de proyectos de código abierto (Open Source)[span_29](end_span).</li>
+                [span_30](start_span)<li>Práctica de Ciclismo de ruta y montaña de alto rendimiento[span_30](end_span).</li>
+            </ul>
+        </section>
+
+    </div>
+
+</body>
+</html>
